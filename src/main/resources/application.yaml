@@ -1,0 +1,2 @@
+web-client:
+  baseUrl: https://sports.api.decathlon.com
