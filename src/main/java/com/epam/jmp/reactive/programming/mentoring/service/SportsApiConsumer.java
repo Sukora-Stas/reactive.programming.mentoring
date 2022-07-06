@@ -15,7 +15,9 @@ public class SportsApiConsumer implements SmartLifecycle {
 
     @Override
     public void start() {
-        sportsRepository.insert(apiClient.getAllSportsData()).blockLast();
+        /*if (sportsRepository.findById("66") == null) {
+            sportsRepository.insert(apiClient.getAllSportsData().limitRate(20)).blockLast();
+        }*/
     }
 
     @Override
