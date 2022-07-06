@@ -15,7 +15,7 @@ public class SportsApiConsumer implements SmartLifecycle {
 
     @Override
     public void start() {
-        sportsRepository.saveAll(apiClient.getAllSportsData()).blockLast();
+        sportsRepository.insert(apiClient.getAllSportsData()).blockLast();
     }
 
     @Override

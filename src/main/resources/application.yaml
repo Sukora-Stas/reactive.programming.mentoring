@@ -1,2 +1,10 @@
+spring:
+  data:
+    mongodb:
+      database: ${SPORTS_DB:sports}
+      port: ${DB_PORT:27017}
+      password: ${MONGO_INITDB_ROOT_PASSWORD:password}
+      username: ${MONGO_INITDB_ROOT_USERNAME:root}
+      authentication-database: admin
 web-client:
   baseUrl: https://sports.api.decathlon.com
