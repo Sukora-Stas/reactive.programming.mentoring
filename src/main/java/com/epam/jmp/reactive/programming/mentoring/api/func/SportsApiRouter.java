@@ -19,6 +19,8 @@ public class SportsApiRouter {
                         GET("/{id}")
                                 .and(accept(MediaType.APPLICATION_JSON))
                                 .and(contentType(MediaType.APPLICATION_JSON)),
-                        sportsApiHandler::getById));
+                        sportsApiHandler::getById)
+                        .andRoute(
+                                POST("/{name}"), sportsApiHandler::add));
     }
 }
